@@ -92,7 +92,7 @@
                                             </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a id="logoutButton" class="nav-link" href="./logout" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                                            <a id="logoutButton" class="nav-link" href="./logout" data-bs-toggle="modal" data-bs-target="#modalCheck1">
                                                 <span class="nav-link-icon d-md-none d-lg-inline-block">
                                                     <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-logout-2"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 8v-2a2 2 0 0 1 2 -2h7a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-7a2 2 0 0 1 -2 -2v-2" /><path d="M15 12h-12l3 -3" /><path d="M6 15l-3 -3" /></svg>
                                                 </span>
@@ -152,79 +152,442 @@
                   </div>
                 </div>
               </div>
-            <div class="col-12">
-                <div class="col-sm-12 col-lg-10 ">
-                    
-                    <fieldset class="form-fieldset bg-white">
-                        <div class="mb-3">
-                          <label class="form-label required">Nama Lengkap</label>
-                          <input type="text" class="form-control" autocomplete="off" />
+            <div class="col-12 mb-4">
+                <div class="col-sm-12 col-lg-12 ">
+                    <div class="text-end mb-3">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalCheck">
+                            Periksa
+                        </button>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table  table-vcenter ">
+                                    <thead>
+                                    <tr>
+                                        <th class="w-1">Nomer Antrian  </th>
+                                        <th>Nama</th>
+                                        <th>Laboratorium</th>
+                                        <th class="w-2">Aksi</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><span class="text-secondary">K-04</span></td>
+                                            <td>Wanda AP</td>
+                                            <td>Laboratorium Klinik</td>
+                                            <td><a href="" class="btn btn-primary">Detail</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="text-secondary">KM-11</span></td>
+                                            <td>Faza KN</td>
+                                            <td>Laboratorium Kesehatan Masyarakat</td>
+                                            <td><a href="" class="btn btn-primary">Detail</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="text-secondary">K-21</span></td>
+                                            <td>Riyan DS</td>
+                                            <td>Laboratorium Klinik</td>
+                                            <td><a href="" class="btn btn-primary">Detail</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="text-secondary">K-25</span></td>
+                                            <td>Budiono Siregar</td>
+                                            <td>Laboratorium Klinik</td>
+                                            <td><a href="" class="btn btn-primary">Detail</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="text-secondary">KM-21</span></td>
+                                            <td>Ikhlashul AM</td>
+                                            <td>Laboratorium Kesehatan Masyarakat</td>
+                                            <td><a href="" class="btn btn-primary">Detail</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="text-secondary">KM-25</span></td>
+                                            <td>Albert JM</td>
+                                            <td>Laboratorium Kesehatan Masyarakat</td>
+                                            <td><a href="" class="btn btn-primary">Detail</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                              <div class="card-footer d-flex align-items-center">
+                                <p class="m-0 text-secondary">Showing <span>1</span> to <span>8</span> of <span>16</span> entries</p>
+                                <ul class="pagination m-0 ms-auto">
+                                    <li class="page-item disabled">
+                                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">
+                                        <!-- Download SVG icon from http://tabler.io/icons/icon/chevron-left -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-1"><path d="M15 6l-6 6l6 6" /></svg>
+                                    prev
+                                        </a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">
+                                                next 
+                                        <!-- Download SVG icon from http://tabler.io/icons/icon/chevron-right -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-1"><path d="M9 6l6 6l-6 6" /></svg>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="mb-3">
-                          <label class="form-label required">NIK</label>
-                          <p id="error-message" class="error text-danger"></p>
-                          <input type="text" class="form-control" autocomplete="off" oninput="validateNIK(this)"/>
+                    </div>
+                      
+                </div>
+
+                <div class="modal" id="modalCheck" tabindex="-1">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title">Form Pemeriksaan</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="mb-3">
-                          <label class="form-label required">Alamat</label>
-                          <textarea type="email" class="form-control" autocomplete="off" ></textarea>
-                        </di>
-                        <div class="mb-3 mt-3">
-                          <label class="form-label">Jenis Kelamin</label>
-                          <select name="" id="" class="form-control" autocomplete="off">
-                            <option value="">Laki-laki</option>
-                            <option value="">Perempuan</option>
-                          </select>
+                        <div class="modal-body">
+                            <fieldset class="form-fieldset bg-white">
+                                <div class="mb-3">
+                                  <label class="form-label required">Nama Lengkap</label>
+                                  <input type="text" class="form-control" autocomplete="off" />
+                                </div>
+                                <div class="mb-3">
+                                  <label class="form-label required">NIK</label>
+                                  <p id="error-message" class="error text-danger"></p>
+                                  <input type="text" class="form-control" autocomplete="off" oninput="validateNIK(this)"/>
+                                </div>
+                                <div class="mb-3">
+                                  <label class="form-label required">Alamat</label>
+                                  <textarea type="email" class="form-control" autocomplete="off" ></textarea>
+                                </di>
+                                <div class="mb-3 mt-3">
+                                  <label class="form-label">Jenis Kelamin</label>
+                                  <select name="" id="" class="form-control" autocomplete="off">
+                                    <option value="">Laki-laki</option>
+                                    <option value="">Perempuan</option>
+                                  </select>
+                                </div>
+                                <div class="mb-3 mt-3">
+                                    <label class="form-label">Agama</label>
+                                    <select name="" id="" class="form-control" autocomplete="off">
+                                      <option value="">Islam</option>
+                                      <option value="">Kristen</option>
+                                      <option value="">Katolik</option>
+                                      <option value="">Hindu</option>
+                                      <option value="">Budha</option>
+                                      <option value="">Kong hu chu</option>
+                                    </select>
+                                  </div>
+                                  <div class="mb-3">
+                                    <label class="form-label required">Profesi</label>
+                                    <input type="text" class="form-control" autocomplete="off" />
+                                  </div>
+                                  <div class="mb-3">
+                                    <label class="form-label required">Golongan Darah</label>
+                                    <input type="text" class="form-control" autocomplete="off" />
+                                  </div>
+                              </fieldset> 
+                              <div class="card">
+                                <div class="card-body">
+                                    <div class="mb-3">
+                                        <label class="form-label">Lab Type</label>
+                                        <select id="labType" class="form-select">
+                                            <option value="">Pilih Lab Type</option>
+                                            <option value="klinik">Laboratorium Klinik</option>
+                                            <option value="kesmas">Laboratorium Kesehatan Masyarakat</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3" id="inspectionDiv" style="display: none;">
+                                        <label class="form-label">Inspection</label>
+                                        <select id="inspection" class="form-select">
+                                            <option value="">Pilih Inspection</option>
+                                        </select>
+                                    </div>
+                                    <div id="checkboxContainer" class="mt-3" style="display: none;"></div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="mb-3 mt-3">
-                            <label class="form-label">Agama</label>
-                            <select name="" id="" class="form-control" autocomplete="off">
-                              <option value="">Islam</option>
-                              <option value="">Kristen</option>
-                              <option value="">Katolik</option>
-                              <option value="">Hindu</option>
-                              <option value="">Budha</option>
-                              <option value="">Kong hu chu</option>
-                            </select>
-                          </div>
-                          <div class="mb-3">
-                            <label class="form-label required">Profesi</label>
-                            <input type="text" class="form-control" autocomplete="off" />
-                          </div>
-                          <div class="mb-3">
-                            <label class="form-label required">Golongan Darah</label>
-                            <input type="text" class="form-control" autocomplete="off" />
-                          </div>
-                      </fieldset>
+                        <div class="modal-footer">
+                          <button type="button" class="btn me-auto" data-bs-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Submit</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal modal-blur fade" id="modalDetail" tabindex="-1" role="dialog" aria-hidden="true">
+                    <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Informasi Data Pasien</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="card mb-4">
+                                        <div class="card-header">
+                                            <h3 class="card-title">Informasi Pribadi</h3>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="mb-3">
+                                                <label class="form-label">Nama</label>
+                                                <input type="text" id="modalName" class="form-control" name="example-password-input"  disabled />
+                                            </div>
+                                            <div class="mb-3">
+                                                <label class="form-label">NIK</label>
+                                                <input type="text"  id="modalNIK" class="form-control" name="example-password-input"  disabled />
+                                            </div>
+                                            <div class="mb-3">
+                                                <label class="form-label">Alamat</label>
+                                                <input type="text"  id="modalAlamat" class="form-control" name="example-password-input"  disabled />
+                                            </div>
+                                            <div class="mb-3">
+                                                <label class="form-label">Jenis Kelamin</label>
+                                                <input type="text"  id="modalJK" class="form-control" name="example-password-input" disabled />
+                                            </div>
+                                            <div class="mb-3">
+                                                <label class="form-label">Agama</label>
+                                                <input type="text"  id="modalAgama" class="form-control" name="example-password-input"  disabled />
+                                            </div>
+                                            <div class="mb-3">
+                                                <label class="form-label">Pekerjaan</label>
+                                                <input type="text"  id="modalProfesi" class="form-control" name="example-password-input"  disabled />
+                                            </div>
+                                            <div class="mb-3">
+                                                <label class="form-label">Golongan Darah</label>
+                                                <input type="text"  id="modalGolDarah" class="form-control" name="example-password-input"  disabled />
+                                            </div>
+                                        </div>
+                                    </div>							  
+                                </div>
+                                <div class="row">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h3 class="card-title">Data Pemeriksaan</h3>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="mb-3">
+                                                <label class="form-label">Lab Type</label>
+                                                <select id="labType" class="form-select">
+                                                    <option value="">Pilih Lab Type</option>
+                                                    <option value="klinik">Laboratorium Klinik</option>
+                                                    <option value="kesmas">Laboratorium Kesehatan Masyarakat</option>
+                                                </select>
+                                            </div>
+                                            <div class="mb-3" id="inspectionDiv" style="display: none;">
+                                                <label class="form-label">Inspection</label>
+                                                <select id="inspection" class="form-select">
+                                                    <option value="">Pilih Inspection</option>
+                                                </select>
+                                            </div>
+                                            <div id="textareaContainer" class="mt-3" style="display: none;"></div>
+                                        </div>														
+                                    </div>							  
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="#" class="btn btn-link link-secondary btn-3" data-bs-dismiss="modal">
+                                        Cancel
+                                    </a>
+                                    <a href="#" class="btn btn-danger btn-5 ms-auto" data-bs-dismiss="modal">
+                                        SIMPAN
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="col-12">
-                <div class="col-sm-12 col-lg-10 ">
-              
-            <div class="card">
-                <div class="card-body">
-                    
-                    <div class="mb-3">
-                        <label class="form-label">Lab Type</label>
-                        <select id="labType" class="form-select">
-                            <option value="">Pilih Lab Type</option>
-                            <option value="klinik">Laboratorium Klinik</option>
-                            <option value="kesmas">Laboratorium Kesehatan Masyarakat</option>
-                        </select>
+            
+            <div class="col-12 mb-3 mt-4">
+                <div class="row row-cards">
+                    <div class="col-sm-6 col-lg-12">
+                        <div class="card card-sm">
+                            <div class="card-header">
+                                <h3 class="card-title">Daftar Pasien</h3>
+                            </div>
+                            <div class="card-body border-bottom py-3">
+                                <div class="d-flex">
+                                    <div class="text-secondary">
+                                        Show
+                                        <div class="mx-2 d-inline-block">
+                                            <input type="text" class="form-control form-control-sm" value="8" size="3" aria-label="Invoices count">
+                                        </div>
+                                        entries
+                                    </div>
+                                    <div class="ms-auto text-secondary">
+                                        Search:
+                                        <div class="ms-2 d-inline-block">
+                                            <input type="text" class="form-control form-control-sm" aria-label="Search invoice">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table table-vcenter table-nowrap">
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th>No. 
+                                                <!-- Download SVG icon from http://tabler.io/icons/icon/chevron-up -->
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-sm icon-thick icon-2"><path d="M6 15l6 -6l6 6" /></svg>
+                                            </th>
+                                            <th>Nama Pasien</th>
+                                            <th>Status</th>
+                                            <th>Aksi</th>
+                                            <th ></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td></td>
+                                            <td>K-04</td>
+                                            <td>Budiono Siregar</td>
+                                            <td>
+                                                <span class="badge bg-danger me-1"></span> Proses Dokter
+                                            </td>
+                                            <td>
+                                                <a href="#" class="btn btn-danger me-2" data-bs-toggle="modal" data-bs-target="#modal-report">Proses</a>
+                                            </td>             
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>K-04</td>
+                                            <td>Budiono Siregar</td>
+                                            <td>
+                                                <span class="badge bg-success me-1"></span> Proses Operator
+                                            </td>
+                                            <td>
+                                                <span class="bg-query me-1"></span> Success
+                                            </td>             
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>K-04</td>
+                                            <td>Budiono Siregar</td>
+                                            <td>
+                                                <span class="badge bg-danger me-1"></span> Proses Dokter
+                                            </td>
+                                            <td>
+                                                <a href="#" class="btn btn-danger me-2">Proses</a>
+                                            </td>             
+                                        </tr>            
+                                    </tbody>
+                                </table>
+                            </div>							
+                            <div class="modal modal-blur fade" id="modal-report" tabindex="-1" role="dialog" aria-hidden="true">
+                                <div class="modal-dialog modal-lg" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Informasi Data Pasien</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="row">
+                                                <div class="card mb-4">
+                                                    <div class="card-header">
+                                                        <h3 class="card-title">Informasi Pribadi</h3>
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <div class="mb-3">
+                                                            <label class="form-label">Nama</label>
+                                                            <input type="text" class="form-control" name="example-password-input" placeholder="Budiono Siregar" disabled />
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label class="form-label">NIK</label>
+                                                            <input type="text" class="form-control" name="example-password-input" placeholder="3212615205250101" disabled />
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label class="form-label">Alamat</label>
+                                                            <input type="text" class="form-control" name="example-password-input" placeholder="Jl. Soedirman, Kota Tegal" disabled />
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label class="form-label">Jenis Kelamin</label>
+                                                            <input type="text" class="form-control" name="example-password-input" placeholder="Laki laki" disabled />
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label class="form-label">Agama</label>
+                                                            <input type="text" class="form-control" name="example-password-input" placeholder="Islam" disabled />
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label class="form-label">Pekerjaan</label>
+                                                            <input type="text" class="form-control" name="example-password-input" placeholder="Nahkoda" disabled />
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label class="form-label">Golongan Darah</label>
+                                                            <input type="text" class="form-control" name="example-password-input" placeholder="AB" disabled />
+                                                        </div>
+                                                    </div>
+                                                </div>							  
+                                            </div>
+                                            <div class="row">
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <h3 class="card-title">Data Pemeriksaan</h3>
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <div class="mb-3">
+                                                            <label class="form-label">Lab Type</label>
+                                                            <select id="labType" class="form-select">
+                                                                <option value="">Pilih Lab Type</option>
+                                                                <option value="klinik">Laboratorium Klinik</option>
+                                                                <option value="kesmas">Laboratorium Kesehatan Masyarakat</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="mb-3" id="inspectionDiv" style="display: none;">
+                                                            <label class="form-label">Inspection</label>
+                                                            <select id="inspection" class="form-select">
+                                                                <option value="">Pilih Inspection</option>
+                                                            </select>
+                                                        </div>
+                                                        <div id="textareaContainer" class="mt-3" style="display: none;"></div>
+                                                    </div>														
+                                                </div>							  
+                                            </div>
+                                            <div class="modal-footer">
+                                                <a href="#" class="btn btn-link link-secondary btn-3" data-bs-dismiss="modal">
+                                                    Cancel
+                                                </a>
+                                                <a href="#" class="btn btn-danger btn-5 ms-auto" data-bs-dismiss="modal">
+                                                    SIMPAN
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer d-flex align-items-center">
+                                <p class="m-0 text-secondary">Showing <span>1</span> to <span>8</span> of <span>16</span> entries</p>
+                                <ul class="pagination m-0 ms-auto">
+                                    <li class="page-item disabled">
+                                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">
+                                        <!-- Download SVG icon from http://tabler.io/icons/icon/chevron-left -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-1"><path d="M15 6l-6 6l6 6" /></svg>
+                                    prev
+                                        </a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">
+                                                next 
+                                        <!-- Download SVG icon from http://tabler.io/icons/icon/chevron-right -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-1"><path d="M9 6l6 6l-6 6" /></svg>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <div class="mb-3" id="inspectionDiv" style="display: none;">
-                        <label class="form-label">Inspection</label>
-                        <select id="inspection" class="form-select">
-                            <option value="">Pilih Inspection</option>
-                        </select>
-                    </div>
-                    <div id="checkboxContainer" class="mt-3" style="display: none;"></div>
                 </div>
             </div>
-            </div>
-            </div>
-            <div class="col-10 text-end">
+              
+
+            <div class="col-12 text-end">
 
                 <div class="mt-3">
                     <div class="btn btn-primary">Submit</div>
@@ -246,6 +609,16 @@
 <script src="./dist/js/demo.min.js?1738096685" defer></script>
 <!-- Lab type choice  -->
 <script>
+    function detailModal(name, nik, alamat, jenis_kelamin, agama, profesi, gol_darah,) {
+        document.getElementById("modalName").value = name;
+        document.getElementById("modalNIK").value = nik;
+        document.getElementById("modalAlamat").value = alamat;
+        document.getElementById("modalJK").value = jenis_kelamin;
+        document.getElementById("modalAgama").value = agama;
+        document.getElementById("modalProfesi").value = profesi;
+        document.getElementById("modalGolDarah").value = gol_darah;
+    }
+
     document.getElementById("labType").addEventListener("change", function() {
         let labType = this.value;
         let inspectionSelect = document.getElementById("inspection");

@@ -25,6 +25,25 @@
 	<style>
 		@import url('https://rsms.me/inter/inter.css');
 	</style>
+    <style>
+        @media print {
+            body * {
+                visibility: hidden; /* Sembunyikan semua elemen di halaman */
+            }
+            #exampleModal .modal-content, #exampleModal .modal-content * {
+                visibility: visible; /* Hanya modal yang terlihat */
+            }
+            #exampleModal {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+            }
+            .modal-footer {
+                display: none; /* Sembunyikan footer modal saat cetak */
+            }
+        }
+    </style>
 </head>
 <body class=" layout-fluid">
 <script src="./dist/js/demo-theme.min.js?1738096685"></script>
@@ -153,7 +172,7 @@
               </div>
               
             <div class="col-12">
-                <div class="col-sm-12 col-lg-10">
+                <div class="col-sm-12 col-lg-12">
                     <div class="card">
                         <div class="card-body">
                             <div class="table-responsive">
@@ -163,6 +182,7 @@
                                         <th>Invoice</th>
                                       <th>Name</th>
                                       <th>Tipe Lab</th>
+                                      <th>Status</th>
                                       <th>Total Pembayaran</th>
                                       <th>Aksi</th>
                                     </tr>
@@ -176,11 +196,14 @@
                                       <td >
                                         Laboratorium Klinik
                                       </td>
+                                      <td class="text-danger">
+                                        Belum Dibayar
+                                      </td>
                                       <td >
                                         200.000
                                       </td>
                                       <td>
-                                        <div class="btn btn-secondary" onclick="fillModal('#71717', ' Wanda AP', ' Laboratorium Klinik', '200.000')"data-bs-toggle="modal" data-bs-target="#exampleModal">Detail</div>
+                                        <div class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">Detail</div>
                                       </td>
                                     </tr>
                                     <tr>
@@ -191,11 +214,14 @@
                                       <td >
                                         Laboratorium Klinik
                                       </td>
+                                      <td class="text-danger">
+                                        Belum Dibayar
+                                      </td>
                                       <td >
                                         100.000
                                       </td>
                                       <td>
-                                        <div  class="btn btn-secondary" onclick="fillModal('#6666', ' Faza KN', ' Laboratorium Klinik', '100.000')" data-bs-toggle="modal" data-bs-target="#exampleModal">Detail</div>
+                                        <div  class="btn btn-secondary"  data-bs-toggle="modal" data-bs-target="#exampleModal">Detail</div>
                                       </td>
                                     </tr>
                                     <tr>
@@ -206,11 +232,14 @@
                                       <td >
                                         Laboratorium Kesehatan Masyarakat
                                       </td>
+                                      <td class="text-green">
+                                        Sudah Dibayar
+                                      </td>
                                       <td >
                                         500.000
                                       </td>
                                       <td>
-                                        <div  class="btn btn-secondary" onclick="fillModal('#8888', ' Riyan DS', ' Laboratorium Kesehatan', '500.000')" data-bs-toggle="modal" data-bs-target="#exampleModal">Detail</div>
+                                        <div  class="btn btn-secondary"  data-bs-toggle="modal" data-bs-target="#exampleModal">Detail</div>
                                       </td>
                                     </tr>
                                   </tbody>
@@ -229,26 +258,96 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <div class="mb-3">
-                                <label class="form-label">Invoice</label>
-                                <input type="text" class="form-control" id="modalInv" readonly />
+
+                            <div class="page-body">
+                                <div class="container-xl">
+                    <div class="card card-lg">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-6">
+                                    <p class="h3">SIMLAB</p>
+                                    <address>
+                                        Jl xxx Barat No xx<br>
+                                        Kota Tegal<br>
+                                        Indonesia, 52184<br>
+                                        simlab11@example.com
+                                    </address>
+                                </div>
+                                <div class="col-6 text-end">
+                                    <p class="h3">Wanda AP</p>
+                                    <address>
+                                        Jl xxx No xxx<br>
+                                        Tegal, City<br>
+                                        Indonesia, Postal Code<br>
+                                        wanda@example.com
+                                    </address>
+                                </div>
+                                <div class="col-12 my-5">
+                                    <h1>Invoice #ada</h1>
+                                </div>
                             </div>
-                            <div class="mb-3">
-                                <label class="form-label">Nama</label>
-                                <input type="text" class="form-control" id="modalName" readonly />
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label">Tipe Lab</label>
-                                <input type="text" class="form-control" id="modalLab" readonly />
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label">Total Pembayaran</label>
-                                <input type="text" class="form-control" id="modalAmount" readonly />
+                            <table class="table table-transparent table-responsive">
+                                <thead>
+                                <tr>
+                                    <th class="text-center" style="width: 1%"></th>
+                                    <th>Tipe Lab</th>
+                                    <th class="text-center" style="width: 1%">Cek Lab</th>
+                                    <th class="text-end" style="width: 1%">Harga</th>
+                                    <th class="text-end" style="width: 1%">Jumlah</th>
+                                </tr>
+                                </thead>
+                                <tr>
+                                    <td class="text-center">1</td>
+                                    <td>
+                                        <p class="strong mb-1">Lab Klinik</p>
+                                        <div class="text-secondary">Pemeriksaan Inspection hematologi dengan cek Darah Rutin</div>
+                                    </td>
+                                    <td class="text-center">
+                                        1
+                                    </td>
+                                    <td class="text-end">180.000,00</td>
+                                    <td class="text-end">180.000,00</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2</td>
+                                    <td>
+                                        <p class="strong mb-1">Lab Klinik</p>
+                                        <div class="text-secondary">Pemeriksaan Inspection Fungsi Hati dengan cek Bilirubin Total</div>
+                                    </td>
+                                    <td class="text-center">
+                                        1
+                                    </td>
+                                    <td class="text-end">150.000,00</td>
+                                    <td class="text-end">150.000,00</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">3</td>
+                                    <td>
+                                        <p class="strong mb-1">Lab Kesehatan Masyarakat</p>
+                                        <div class="text-secondary">Pemeriksaan Inspection Makanan dan Minuman dengan cek Formalin dan Pengawet</div>
+                                    </td>
+                                    <td class="text-center">
+                                        2
+                                    </td>
+                                    <td class="text-end">100.000,00</td>
+                                    <td class="text-end">200.000,00</td>
+                                </tr>
+                               
+                                
+                                <tr>
+                                    <td colspan="4" class="font-weight-bold text-uppercase text-end">Total Pembayaran</td>
+                                    <td class="font-weight-bold text-end">$530.000,00</td>
+                                </tr>
+                            </table>
+                            <p class="text-secondary text-center mt-5">Terima kasih banyak telah berbisnis dengan kami. Kami berharap dapat bekerja sama dengan Anda lagi!</p>
+                        </div>
+                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="modal-footer">
                             <a href="#" class="btn btn-link link-secondary" data-bs-dismiss="modal">Cancel</a>
-                            <a href="#" class="btn btn-primary ms-auto" data-bs-dismiss="modal">
+                            <a href="#" class="btn btn-primary ms-auto" onclick="printModal()">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#f2f2f2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-printer">
                                     <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                                     <path d="M17 17h2a2 2 0 0 0 2 -2v-4a2 2 0 0 0 -2 -2h-14a2 2 0 0 0 -2 2v4a2 2 0 0 0 2 2h2" />
@@ -274,14 +373,15 @@
 			<!-- Tabler Core -->
 <script src="./dist/js/tabler.min.js?1738096685" defer></script>
 <script src="./dist/js/demo.min.js?1738096685" defer></script>
-<!-- Modal js -->
+<!-- Print Modal js -->
 <script>
-    function fillModal(inv, name, lab, amount) {
-        document.getElementById("modalInv").value = inv;
-        document.getElementById("modalName").value = name;
-        document.getElementById("modalLab").value = lab;
-        document.getElementById("modalAmount").value = amount;
-    }
+function printModal() {
+    window.print()
+}
+
 </script>
+
+
+
 </body>
 </html>
