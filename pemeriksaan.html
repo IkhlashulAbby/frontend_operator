@@ -144,18 +144,18 @@
                 <div class="row align-items-center">
                     <div class="col">
                       <div class="page-pretitle">
-                      Form
+                      Halaman
                     </div>
-                    <h2 class="page-title">
+                    <h1 class="page-title">
                       Pemeriksaan Laboratorium
-                    </h2>
+                    </h1>
                   </div>
                 </div>
               </div>
-            <div class="col-12 mb-4">
+            <div class="col-12 mb-6">
                 <div class="col-sm-12 col-lg-12 ">
                     <div class="text-end mb-3">
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalCheck">
+                        <button type="button" class="btn btn-primary btn-periksa" data-bs-toggle="modal" data-bs-target="#modalCheck">
                             Periksa
                         </button>
                     </div>
@@ -168,6 +168,7 @@
                                         <th class="w-1">Nomer Antrian  </th>
                                         <th>Nama</th>
                                         <th>Laboratorium</th>
+                                        <th>Status</th>
                                         <th class="w-2">Aksi</th>
                                     </tr>
                                     </thead>
@@ -176,36 +177,42 @@
                                             <td><span class="text-secondary">K-04</span></td>
                                             <td>Wanda AP</td>
                                             <td>Laboratorium Klinik</td>
-                                            <td><a href="" class="btn btn-primary">Detail</a></td>
+                                            <td class="text-muted"><i>Menunggu Diproses</i></td>
+                                            <td><a href="" class="btn btn-primary" data-bs-target="#modalDetail" data-bs-toggle="modal" onclick="detailModal('Wanda AP', '1244118986122', 'Tegal', 'Laki-laki','Islam','DevOps','AB')">Detail</a></td>
                                         </tr>
                                         <tr>
                                             <td><span class="text-secondary">KM-11</span></td>
                                             <td>Faza KN</td>
                                             <td>Laboratorium Kesehatan Masyarakat</td>
+                                            <td class="text-muted"><i>Menunggu Diproses</i></td>
                                             <td><a href="" class="btn btn-primary">Detail</a></td>
                                         </tr>
                                         <tr>
                                             <td><span class="text-secondary">K-21</span></td>
                                             <td>Riyan DS</td>
                                             <td>Laboratorium Klinik</td>
+                                            <td class="text-muted"><i>Menunggu Diproses</i></td>
                                             <td><a href="" class="btn btn-primary">Detail</a></td>
                                         </tr>
                                         <tr>
                                             <td><span class="text-secondary">K-25</span></td>
                                             <td>Budiono Siregar</td>
                                             <td>Laboratorium Klinik</td>
+                                            <td class="text-muted"><i>Menunggu Diproses</i></td>
                                             <td><a href="" class="btn btn-primary">Detail</a></td>
                                         </tr>
                                         <tr>
                                             <td><span class="text-secondary">KM-21</span></td>
                                             <td>Ikhlashul AM</td>
                                             <td>Laboratorium Kesehatan Masyarakat</td>
+                                            <td class="text-muted"><i>Menunggu Diproses</i></td>
                                             <td><a href="" class="btn btn-primary">Detail</a></td>
                                         </tr>
                                         <tr>
                                             <td><span class="text-secondary">KM-25</span></td>
                                             <td>Albert JM</td>
                                             <td>Laboratorium Kesehatan Masyarakat</td>
+                                            <td class="text-muted"><i>Menunggu Diproses</i></td>
                                             <td><a href="" class="btn btn-primary">Detail</a></td>
                                         </tr>
                                     </tbody>
@@ -239,7 +246,6 @@
                     </div>
                       
                 </div>
-
                 <div class="modal" id="modalCheck" tabindex="-1">
                     <div class="modal-dialog" role="document">
                       <div class="modal-content">
@@ -316,247 +322,145 @@
                       </div>
                     </div>
                   </div>
-                  <div class="modal modal-blur fade" id="modalDetail" tabindex="-1" role="dialog" aria-hidden="true">
-                    <div class="modal-dialog modal-lg" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title">Informasi Data Pasien</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <div class="row">
-                                    <div class="card mb-4">
-                                        <div class="card-header">
-                                            <h3 class="card-title">Informasi Pribadi</h3>
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="mb-3">
-                                                <label class="form-label">Nama</label>
-                                                <input type="text" id="modalName" class="form-control" name="example-password-input"  disabled />
-                                            </div>
-                                            <div class="mb-3">
-                                                <label class="form-label">NIK</label>
-                                                <input type="text"  id="modalNIK" class="form-control" name="example-password-input"  disabled />
-                                            </div>
-                                            <div class="mb-3">
-                                                <label class="form-label">Alamat</label>
-                                                <input type="text"  id="modalAlamat" class="form-control" name="example-password-input"  disabled />
-                                            </div>
-                                            <div class="mb-3">
-                                                <label class="form-label">Jenis Kelamin</label>
-                                                <input type="text"  id="modalJK" class="form-control" name="example-password-input" disabled />
-                                            </div>
-                                            <div class="mb-3">
-                                                <label class="form-label">Agama</label>
-                                                <input type="text"  id="modalAgama" class="form-control" name="example-password-input"  disabled />
-                                            </div>
-                                            <div class="mb-3">
-                                                <label class="form-label">Pekerjaan</label>
-                                                <input type="text"  id="modalProfesi" class="form-control" name="example-password-input"  disabled />
-                                            </div>
-                                            <div class="mb-3">
-                                                <label class="form-label">Golongan Darah</label>
-                                                <input type="text"  id="modalGolDarah" class="form-control" name="example-password-input"  disabled />
-                                            </div>
-                                        </div>
-                                    </div>							  
+                <div class="modal" id="modalDetail" tabindex="-1">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title">Form Pemeriksaan</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <fieldset class="form-fieldset bg-white">
+                                <div class="mb-3">
+                                  <label class="form-label required">Nama Lengkap</label>
+                                  <input type="text" class="form-control" autocomplete="off" value="Ikhlashul" disabled/>
                                 </div>
-                                <div class="row">
-                                    <div class="card">
-                                        <div class="card-header">
-                                            <h3 class="card-title">Data Pemeriksaan</h3>
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="mb-3">
-                                                <label class="form-label">Lab Type</label>
-                                                <select id="labType" class="form-select">
-                                                    <option value="">Pilih Lab Type</option>
-                                                    <option value="klinik">Laboratorium Klinik</option>
-                                                    <option value="kesmas">Laboratorium Kesehatan Masyarakat</option>
-                                                </select>
-                                            </div>
-                                            <div class="mb-3" id="inspectionDiv" style="display: none;">
-                                                <label class="form-label">Inspection</label>
-                                                <select id="inspection" class="form-select">
-                                                    <option value="">Pilih Inspection</option>
-                                                </select>
-                                            </div>
-                                            <div id="textareaContainer" class="mt-3" style="display: none;"></div>
-                                        </div>														
-                                    </div>							  
+                                <div class="mb-3">
+                                  <label class="form-label required">NIK</label>
+                                  <p id="error-message" class="error text-danger"></p>
+                                  <input type="text" class="form-control" autocomplete="off" oninput="validateNIK(this)" value="1231231212322123" disabled/>
                                 </div>
-                                <div class="modal-footer">
-                                    <a href="#" class="btn btn-link link-secondary btn-3" data-bs-dismiss="modal">
-                                        Cancel
-                                    </a>
-                                    <a href="#" class="btn btn-danger btn-5 ms-auto" data-bs-dismiss="modal">
-                                        SIMPAN
-                                    </a>
+                                <div class="mb-3">
+                                  <label class="form-label required">Alamat</label>
+                                  <textarea type="text" class="form-control" autocomplete="off" disabled>Tegal</textarea>
+                                </di>
+                                <div class="mb-3 mt-3">
+                                  <label class="form-label">Jenis Kelamin</label>
+                                  <select name="" id="" class="form-control" autocomplete="off" disabled>
+                                    <option value="">Laki-laki</option>
+                                    <option value="">Perempuan</option>
+                                  </select>
+                                </div>
+                                <div class="mb-3 mt-3">
+                                    <label class="form-label">Agama</label>
+                                    <select name="" id="" class="form-control" autocomplete="off" disabled>
+                                      <option value="">Islam</option>
+                                      <option value="">Kristen</option>
+                                      <option value="">Katolik</option>
+                                      <option value="">Hindu</option>
+                                      <option value="">Budha</option>
+                                      <option value="">Kong hu chu</option>
+                                    </select>
+                                  </div>
+                                  <div class="mb-3">
+                                    <label class="form-label required">Profesi</label>
+                                    <input type="text" class="form-control" autocomplete="off" value="DevOps" disabled/>
+                                  </div>
+                                  <div class="mb-3">
+                                    <label class="form-label required">Golongan Darah</label>
+                                    <input type="text" class="form-control" autocomplete="off" value="O" disabled/>
+                                  </div>
+                              </fieldset> 
+                              <div class="card">
+                                <div class="card-body">
+                                    <div class="mb-3">
+                                        <label class="form-label">Lab Type</label>
+                                        <select id="labType" class="form-select" disabled>
+                                            
+                                            <option value="klinik">Laboratorium Klinik</option>
+                                            <option value="kesmas">Laboratorium Kesehatan Masyarakat</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3" id="inspectionDiv" >
+                                        <label class="form-label">Inspection</label>
+                                        <select id="inspection" class="form-select" disabled>
+                                            <option value="">Fungsi Hati</option>
+                                        </select>
+                                    </div>
+                                    <div id="checkboxContainer" class="mt-3" >
+                                        <h5>Pemeriksaan Hati</h5>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="bilirubin_total" checked disabled>
+                                            <label class="form-check-label" for="bilirubin_total" >Bilirubin Total</label>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn me-auto" data-bs-dismiss="modal">Close</button>
+                        </div>
+                      </div>
                     </div>
-                </div>
+                  </div>
+
+             
+           
+           
             </div>
 
             
-            <div class="col-12 mb-3 mt-4">
+            <div class="col-12 mt-6">
+                <div class="page-title">
+                    <h2>Hasil Pemeriksaan </h2>
+                </div>
                 <div class="row row-cards">
                     <div class="col-sm-6 col-lg-12">
                         <div class="card card-sm">
-                            <div class="card-header">
-                                <h3 class="card-title">Daftar Pasien</h3>
-                            </div>
-                            <div class="card-body border-bottom py-3">
-                                <div class="d-flex">
-                                    <div class="text-secondary">
-                                        Show
-                                        <div class="mx-2 d-inline-block">
-                                            <input type="text" class="form-control form-control-sm" value="8" size="3" aria-label="Invoices count">
-                                        </div>
-                                        entries
-                                    </div>
-                                    <div class="ms-auto text-secondary">
-                                        Search:
-                                        <div class="ms-2 d-inline-block">
-                                            <input type="text" class="form-control form-control-sm" aria-label="Search invoice">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="table-responsive">
-                                <table class="table table-vcenter table-nowrap">
-                                    <thead>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table  table-vcenter ">
+                                        <thead>
                                         <tr>
-                                            <th></th>
-                                            <th>No. 
-                                                <!-- Download SVG icon from http://tabler.io/icons/icon/chevron-up -->
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-sm icon-thick icon-2"><path d="M6 15l6 -6l6 6" /></svg>
-                                            </th>
-                                            <th>Nama Pasien</th>
+                                            <th class="w-1">Nomer Antrian  </th>
+                                            <th>Nama</th>
+                                            <th>Laboratorium</th>
                                             <th>Status</th>
-                                            <th>Aksi</th>
-                                            <th ></th>
+                                            <th class="w-2">Aksi</th>
                                         </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td></td>
-                                            <td>K-04</td>
-                                            <td>Budiono Siregar</td>
-                                            <td>
-                                                <span class="badge bg-danger me-1"></span> Proses Dokter
-                                            </td>
-                                            <td>
-                                                <a href="#" class="btn btn-danger me-2" data-bs-toggle="modal" data-bs-target="#modal-report">Proses</a>
-                                            </td>             
-                                        </tr>
-                                        <tr>
-                                            <td></td>
-                                            <td>K-04</td>
-                                            <td>Budiono Siregar</td>
-                                            <td>
-                                                <span class="badge bg-success me-1"></span> Proses Operator
-                                            </td>
-                                            <td>
-                                                <span class="bg-query me-1"></span> Success
-                                            </td>             
-                                        </tr>
-                                        <tr>
-                                            <td></td>
-                                            <td>K-04</td>
-                                            <td>Budiono Siregar</td>
-                                            <td>
-                                                <span class="badge bg-danger me-1"></span> Proses Dokter
-                                            </td>
-                                            <td>
-                                                <a href="#" class="btn btn-danger me-2">Proses</a>
-                                            </td>             
-                                        </tr>            
-                                    </tbody>
-                                </table>
-                            </div>							
-                            <div class="modal modal-blur fade" id="modal-report" tabindex="-1" role="dialog" aria-hidden="true">
-                                <div class="modal-dialog modal-lg" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title">Informasi Data Pasien</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <div class="row">
-                                                <div class="card mb-4">
-                                                    <div class="card-header">
-                                                        <h3 class="card-title">Informasi Pribadi</h3>
-                                                    </div>
-                                                    <div class="card-body">
-                                                        <div class="mb-3">
-                                                            <label class="form-label">Nama</label>
-                                                            <input type="text" class="form-control" name="example-password-input" placeholder="Budiono Siregar" disabled />
-                                                        </div>
-                                                        <div class="mb-3">
-                                                            <label class="form-label">NIK</label>
-                                                            <input type="text" class="form-control" name="example-password-input" placeholder="3212615205250101" disabled />
-                                                        </div>
-                                                        <div class="mb-3">
-                                                            <label class="form-label">Alamat</label>
-                                                            <input type="text" class="form-control" name="example-password-input" placeholder="Jl. Soedirman, Kota Tegal" disabled />
-                                                        </div>
-                                                        <div class="mb-3">
-                                                            <label class="form-label">Jenis Kelamin</label>
-                                                            <input type="text" class="form-control" name="example-password-input" placeholder="Laki laki" disabled />
-                                                        </div>
-                                                        <div class="mb-3">
-                                                            <label class="form-label">Agama</label>
-                                                            <input type="text" class="form-control" name="example-password-input" placeholder="Islam" disabled />
-                                                        </div>
-                                                        <div class="mb-3">
-                                                            <label class="form-label">Pekerjaan</label>
-                                                            <input type="text" class="form-control" name="example-password-input" placeholder="Nahkoda" disabled />
-                                                        </div>
-                                                        <div class="mb-3">
-                                                            <label class="form-label">Golongan Darah</label>
-                                                            <input type="text" class="form-control" name="example-password-input" placeholder="AB" disabled />
-                                                        </div>
-                                                    </div>
-                                                </div>							  
-                                            </div>
-                                            <div class="row">
-                                                <div class="card">
-                                                    <div class="card-header">
-                                                        <h3 class="card-title">Data Pemeriksaan</h3>
-                                                    </div>
-                                                    <div class="card-body">
-                                                        <div class="mb-3">
-                                                            <label class="form-label">Lab Type</label>
-                                                            <select id="labType" class="form-select">
-                                                                <option value="">Pilih Lab Type</option>
-                                                                <option value="klinik">Laboratorium Klinik</option>
-                                                                <option value="kesmas">Laboratorium Kesehatan Masyarakat</option>
-                                                            </select>
-                                                        </div>
-                                                        <div class="mb-3" id="inspectionDiv" style="display: none;">
-                                                            <label class="form-label">Inspection</label>
-                                                            <select id="inspection" class="form-select">
-                                                                <option value="">Pilih Inspection</option>
-                                                            </select>
-                                                        </div>
-                                                        <div id="textareaContainer" class="mt-3" style="display: none;"></div>
-                                                    </div>														
-                                                </div>							  
-                                            </div>
-                                            <div class="modal-footer">
-                                                <a href="#" class="btn btn-link link-secondary btn-3" data-bs-dismiss="modal">
-                                                    Cancel
-                                                </a>
-                                                <a href="#" class="btn btn-danger btn-5 ms-auto" data-bs-dismiss="modal">
-                                                    SIMPAN
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><span class="text-secondary">K-04</span></td>
+                                                <td>Wanda AP</td>
+                                                <td>Laboratorium Klinik</td>
+                                                <td class="text-green"><i>Selesai Diproses</i></td>
+                                                <td><a href="" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-report">Detail</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="text-secondary">KM-11</span></td>
+                                                <td>Faza KN</td>
+                                                <td>Laboratorium Kesehatan Masyarakat</td>
+                                                <td class="text-green"><i>Selesai Diproses</i></td>
+                                                <td><a href="" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-report">Detail</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="text-secondary">K-21</span></td>
+                                                <td>Riyan DS</td>
+                                                <td>Laboratorium Klinik</td>
+                                                <td class="text-green"><i>Selesai Diproses</i></td>
+                                                <td><a href="" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-report">Detail</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="text-secondary">K-25</span></td>
+                                                <td>Budiono Siregar</td>
+                                                <td>Laboratorium Klinik</td>
+                                                <td class="text-green"><i>Selesai Diproses</i></td>
+                                                <td><a href="" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-report">Detail</a></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                   
                             <div class="card-footer d-flex align-items-center">
                                 <p class="m-0 text-secondary">Showing <span>1</span> to <span>8</span> of <span>16</span> entries</p>
                                 <ul class="pagination m-0 ms-auto">
@@ -581,19 +485,192 @@
                                     </li>
                                 </ul>
                             </div>
+                                </div>	
                         </div>
                     </div>
                 </div>
             </div>
               
 
-            <div class="col-12 text-end">
+            
+        </div>
+        <div class="modal  fade" id="modal-report" tabindex="-1" >
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content" id="printArea">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Informasi Data Pasien</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="page-body">
+                            <div class="container-xl">
 
-                <div class="mt-3">
-                    <div class="btn btn-primary">Submit</div>
+                                <div class="card card-lg mb-3">
+                                    <div class="card-header">
+                                        <h3 class="card-title">Informasi Pribadi</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="mb-3">
+                                            <label class="form-label">Nama</label>
+                                            <input type="text" class="form-control" name="example-password-input" placeholder="Budiono Siregar" disabled />
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label">NIK</label>
+                                            <input type="text" class="form-control" name="example-password-input" placeholder="3212615205250101" disabled />
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label">Alamat</label>
+                                            <input type="text" class="form-control" name="example-password-input" placeholder="Jl. Soedirman, Kota Tegal" disabled />
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label">Jenis Kelamin</label>
+                                            <input type="text" class="form-control" name="example-password-input" placeholder="Laki laki" disabled />
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label">Agama</label>
+                                            <input type="text" class="form-control" name="example-password-input" placeholder="Islam" disabled />
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label">Pekerjaan</label>
+                                            <input type="text" class="form-control" name="example-password-input" placeholder="Nahkoda" disabled />
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label">Golongan Darah</label>
+                                            <input type="text" class="form-control" name="example-password-input" placeholder="AB" disabled />
+                                        </div>
+                                    </div>
+                                </div>							  
+                               
+                                <div class="row">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h3 class="card-title">Data Pemeriksaan</h3>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="mb-3">
+                                                <label class="form-label">Lab Type</label>
+                                                <select id="labType" class="form-select" disabled>
+                                                   
+                                                    <option value="klinik">Laboratorium Klinik</option>
+                                                    <option value="kesmas">Laboratorium Kesehatan Masyarakat</option>
+                                                </select>
+                                            </div>
+                                            <div class="mb-3" id="inspectionDiv" >
+                                                <label class="form-label">Inspection</label>
+                                                <select id="inspection" class="form-select" disabled><option value="fungsi_hati">Fungsi Hati</option><option value="hematologi">Hematologi</option></select>
+                                            </div>
+                                            <div id="textareaContainer" class="mt-3" >
+                                                <h5>Pemeriksaan Hati</h5>
+                                                <div class="mb-3">
+                                                    <label class="form-label">Bilirubin Total</label>
+                                                    <textarea class="form-control" id="bilirubin_total" rows="3" disabled>Hasilnya adalah Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis, temporibus!
+                                                    </textarea>
+                                                </div>
+                                        </div>														
+                                    </div>							  
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="#" class="btn btn-link link-secondary btn-3" data-bs-dismiss="modal">
+                                        Cancel
+                                    </a>
+                                    <a href="#" class="btn btn-danger btn-5 ms-auto" onclick="printModal()">
+                                        Cetak Data
+                                    </a>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
                 </div>
             </div>
         </div>
+        <!-- <div class="modal modal-blur fade show" id="modal-report" tabindex="-1" role="dialog" aria-modal="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Informasi Data Pasien</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <h3 class="card-title">Informasi Pribadi</h3>
+                                </div>
+                                <div class="card-body">
+                                    <div class="mb-3">
+                                        <label class="form-label">Nama</label>
+                                        <input type="text" class="form-control" name="example-password-input" placeholder="Budiono Siregar" disabled="">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">NIK</label>
+                                        <input type="text" class="form-control" name="example-password-input" placeholder="3212615205250101" disabled="">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Alamat</label>
+                                        <input type="text" class="form-control" name="example-password-input" placeholder="Jl. Soedirman, Kota Tegal" disabled="">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Jenis Kelamin</label>
+                                        <input type="text" class="form-control" name="example-password-input" placeholder="Laki laki" disabled="">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Agama</label>
+                                        <input type="text" class="form-control" name="example-password-input" placeholder="Islam" disabled="">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Pekerjaan</label>
+                                        <input type="text" class="form-control" name="example-password-input" placeholder="Nahkoda" disabled="">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Golongan Darah</label>
+                                        <input type="text" class="form-control" name="example-password-input" placeholder="AB" disabled="">
+                                    </div>
+                                </div>
+                            </div>							  
+                        </div>
+                        <div class="row">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="card-title">Data Pemeriksaan</h3>
+                                </div>
+                                <div class="card-body">
+                                    <div class="mb-3">
+                                        <label class="form-label">Lab Type</label>
+                                        <select id="labType" class="form-select">
+                                            <option value="">Pilih Lab Type</option>
+                                            <option value="klinik">Laboratorium Klinik</option>
+                                            <option value="kesmas">Laboratorium Kesehatan Masyarakat</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3" id="inspectionDiv" >
+                                        <label class="form-label">Inspection</label>
+                                        <select id="inspection" class="form-select"><option value="">Pilih Inspection</option><option value="hematologi">Hematologi</option><option value="fungsi_hati">Fungsi Hati</option></select>
+                                    </div>
+                                    <div id="textareaContainer" class="mt-3" >
+                                        <h5>Pemeriksaan Hati</h5>
+                                        <div class="mb-3">
+                                            <label class="form-label">Bilirubin Total</label>
+                                            <textarea class="form-control" id="bilirubin_total" rows="3">
+                                            </textarea>
+                                        </div>
+                                </div>														
+                            </div>							  
+                        </div>
+                        <div class="modal-footer">
+                            <a href="#" class="btn btn-link link-secondary btn-3" data-bs-dismiss="modal">
+                                Cancel
+                            </a>
+                            <a href="#" class="btn btn-danger btn-5 ms-auto" data-bs-dismiss="modal">
+                                SIMPAN
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+    </div>  						 -->
+</div>
         
 
         
@@ -609,7 +686,82 @@
 <script src="./dist/js/demo.min.js?1738096685" defer></script>
 <!-- Lab type choice  -->
 <script>
-    function detailModal(name, nik, alamat, jenis_kelamin, agama, profesi, gol_darah,) {
+document.addEventListener("DOMContentLoaded", function () {
+    function updateInspectionOptions(labType, inspectionSelect, inspectionDiv) {
+        inspectionSelect.innerHTML = '<option value="">Pilih Inspection</option>';
+        inspectionDiv.style.display = "none";
+
+        if (labType === "klinik") {
+            inspectionSelect.innerHTML += '<option value="hematologi">Hematologi</option>';
+            inspectionSelect.innerHTML += '<option value="fungsi_hati">Fungsi Hati</option>';
+        } else if (labType === "kesmas") {
+            inspectionSelect.innerHTML += '<option value="air_minum">Air Minum</option>';
+            inspectionSelect.innerHTML += '<option value="air_limbah">Air Limbah</option>';
+            inspectionSelect.innerHTML += '<option value="makanan_minuman">Makanan dan Minuman</option>';
+        }
+
+        if (labType) {
+            inspectionDiv.style.display = "block";
+        }
+    }
+
+    function updateInputs(inspection, container, type) {
+        container.innerHTML = "";
+        container.style.display = "none";
+
+        let categories = {
+            "hematologi": { "Pemeriksaan Darah": ["Darah Rutin", "Laju Endap Darah", "Golongan Darah", "Bleeding Time (BT)"] },
+            "fungsi_hati": { "Pemeriksaan Hati": ["Bilirubin Total", "Bilirubin Direc", "Bilirubin Indirec"] },
+            "air_minum": { "Fisika": ["Bau", "TDS", "Kekeruhan"], "Kimia": ["PH", "Nitrat", "Nitrit", "Krom Valensi 6"], "Bakteri": ["E. Coli", "Total Coliform"] },
+            "air_limbah": { "Fisika": ["Suhu", "TDS", "TSS"], "Kimia": ["PH", "COD", "BOD", "Amonia"], "Bakteri": ["MPN Coliform"] },
+            "makanan_minuman": { "Kimia": ["Formalin", "Pemanis", "Pengawet"], "Bakteri": ["E.Coli", "MPN Coliform", "Angka Kuman"] }
+        };
+
+        if (categories[inspection]) {
+            Object.keys(categories[inspection]).forEach(category => {
+                let categoryTitle = document.createElement("h5");
+                categoryTitle.innerText = category;
+                container.appendChild(categoryTitle);
+
+                categories[inspection][category].forEach(item => {
+                    let div = document.createElement("div");
+                    div.classList.add(type === "checkbox" ? "form-check" : "mb-3");
+
+                    if (type === "checkbox") {
+                        let input = document.createElement("input");
+                        input.classList.add("form-check-input");
+                        input.type = "checkbox";
+                        input.id = item.replace(/\s+/g, '_').toLowerCase();
+
+                        let label = document.createElement("label");
+                        label.classList.add("form-check-label");
+                        label.htmlFor = input.id;
+                        label.innerText = item;
+
+                        div.appendChild(input);
+                        div.appendChild(label);
+                    } else {
+                        let label = document.createElement("label");
+                        label.classList.add("form-label");
+                        label.innerText = item;
+
+                        let textarea = document.createElement("textarea");
+                        textarea.classList.add("form-control");
+                        textarea.id = item.replace(/\s+/g, '_').toLowerCase();
+                        textarea.rows = 3;
+
+                        div.appendChild(label);
+                        div.appendChild(textarea);
+                    }
+                    container.appendChild(div);
+                });
+            });
+
+            container.style.display = "block";
+        }
+    }
+
+    function detailModal(name, nik, alamat, jenis_kelamin, agama, profesi, gol_darah) {
         document.getElementById("modalName").value = name;
         document.getElementById("modalNIK").value = nik;
         document.getElementById("modalAlamat").value = alamat;
@@ -619,89 +771,29 @@
         document.getElementById("modalGolDarah").value = gol_darah;
     }
 
-    document.getElementById("labType").addEventListener("change", function() {
-        let labType = this.value;
-        let inspectionSelect = document.getElementById("inspection");
-        let inspectionDiv = document.getElementById("inspectionDiv");
-        let checkboxContainer = document.getElementById("checkboxContainer");
-
-        inspectionSelect.innerHTML = '<option value="">Pilih Inspection</option>';
-        checkboxContainer.innerHTML = "";
-        checkboxContainer.style.display = "none";
-
-        if (labType === "klinik") {
-            inspectionSelect.innerHTML += '<option value="hematologi">Hematologi</option>';
-            inspectionSelect.innerHTML += '<option value="fungsi_hati">Fungsi Hati</option>';
-            inspectionDiv.style.display = "block";
-        } else if (labType === "kesmas") {
-            inspectionSelect.innerHTML += '<option value="air_minum">Air Minum</option>';
-            inspectionSelect.innerHTML += '<option value="air_limbah">Air Limbah</option>';
-            inspectionSelect.innerHTML += '<option value="makanan_minuman">Makanan dan Minuman</option>';
-            inspectionDiv.style.display = "block";
-        } else {
-            inspectionDiv.style.display = "none";
-        }
+    // Event untuk dropdown pertama (labType → inspection → checkbox)
+    document.getElementById("labType").addEventListener("change", function () {
+        updateInspectionOptions(this.value, document.getElementById("inspection"), document.getElementById("inspectionDiv"));
     });
 
-    document.getElementById("inspection").addEventListener("change", function() {
-        let inspection = this.value;
-        let checkboxContainer = document.getElementById("checkboxContainer");
-        checkboxContainer.innerHTML = "";
-
-        let categories = {
-            "hematologi": {
-                "Pemeriksaan Darah": ["Darah Rutin", "Laju Endap Darah", "Golongan Darah", "Bleeding Time (BT)"]
-            },
-            "fungsi_hati": {
-                "Pemeriksaan Hati": ["Bilirubin Total", "Bilirubin Direc", "Bilirubin Indirec"]
-            },
-            "air_minum": {
-                "Fisika": ["Bau", "TDS", "Kekeruhan"],
-                "Kimia": ["PH", "Nitrat", "Nitrit", "Krom Valensi 6"],
-                "Bakteri": ["E. Coli", "Total Coliform"]
-            },
-            "air_limbah": {
-                "Fisika": ["Suhu", "TDS", "TSS"],
-                "Kimia": ["PH", "COD", "BOD", "Amonia"],
-                "Bakteri": ["MPN Coliform"]
-            },
-            "makanan_minuman": {
-                "Kimia": ["Formalin", "Pemanis", "Pengawet"],
-                "Bakteri": ["E.Coli", "MPN Coliform", "Angka Kuman"]
-            }
-        };
-
-        if (categories[inspection]) {
-            Object.keys(categories[inspection]).forEach(category => {
-                let categoryTitle = document.createElement("h5");
-                categoryTitle.innerText = category;
-                checkboxContainer.appendChild(categoryTitle);
-
-                categories[inspection][category].forEach(item => {
-                    let div = document.createElement("div");
-                    div.classList.add("form-check");
-
-                    let input = document.createElement("input");
-                    input.classList.add("form-check-input");
-                    input.type = "checkbox";
-                    input.id = item.replace(/\s+/g, '_').toLowerCase();
-
-                    let label = document.createElement("label");
-                    label.classList.add("form-check-label");
-                    label.htmlFor = input.id;
-                    label.innerText = item;
-
-                    div.appendChild(input);
-                    div.appendChild(label);
-                    checkboxContainer.appendChild(div);
-                });
-            });
-
-            checkboxContainer.style.display = "block";
-        } else {
-            checkboxContainer.style.display = "none";
-        }
+    document.getElementById("inspection").addEventListener("change", function () {
+        updateInputs(this.value, document.getElementById("checkboxContainer"), "checkbox");
     });
+});
+
+
+</script>
+<!-- modal value -->
+<script>
+    function detailModal(name, nik, alamat, jenis_kelamin, agama, profesi, gol_darah,) {
+        document.getElementById("modalName").value = name;
+        document.getElementById("modalNIK").value = nik;
+        document.getElementById("modalAlamat").value = alamat;
+        document.getElementById("modalJK").value = jenis_kelamin;
+        document.getElementById("modalAgama").value = agama;
+        document.getElementById("modalProfesi").value = profesi;
+        document.getElementById("modalGolDarah").value = gol_darah;
+    }
 </script>
 <!-- Validate input NIK -->
 <script>
@@ -722,19 +814,20 @@
         }
     }
 </script>
-<!-- Navlink Active -->
+<!-- Dropdown lab type setelah diproses -->
 <script>
-    // Ambil URL halaman saat ini
-    let currentPage = window.location.pathname.split("/").pop(); // Ambil nama file terakhir
 
-    // Ambil semua link di sidebar
-    let sidebarLinks = document.querySelectorAll(".nav-link");
+    function printModal() {
+        let printContents = document.getElementById('printArea').innerHTML;
+        let originalContents = document.body.innerHTML;
 
-    sidebarLinks.forEach(link => {
-        if (link.getAttribute("href") === currentPage) {
-            link.classList.add("active"); // Tambahkan class "active"
-        }
-    });
+        document.body.innerHTML = printContents;
+        window.print();
+        document.body.innerHTML = originalContents;
+        location.reload(); // Untuk mencegah error setelah print
+    }
+
+
 </script>
 </body>
 </html>
